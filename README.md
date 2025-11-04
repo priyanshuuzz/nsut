@@ -60,44 +60,27 @@ The database schema has been created with the following tables:
 - `reports` - Generated reports
 - `ai_predictions` - AI-based predictions
 
-### 4. Create Demo Users
+### 4. Demo Users (Already Created!)
 
-In your Supabase dashboard, create users via Authentication > Users:
+Demo users are already set up and ready to use:
 
 #### Worker Account
-1. Create user: `worker@demo.com` / `password123`
-2. After creation, add profile:
-```sql
-INSERT INTO profiles (id, full_name, role, panchayat_id, phone)
-VALUES (
-  'user_id_from_auth',
-  'Ramesh Kumar',
-  'worker',
-  '00000000-0000-0000-0000-000000000001',
-  '+91-9876543210'
-);
-```
+- **Email**: `worker@demo.com`
+- **Password**: `password123`
+- **Role**: Sanitation Worker
+- **Features**: Check-in/out, log waste collection, view daily summary
+- **Sample Data**: 20 waste collection logs, 6 days attendance, 382.3 kg total waste
 
 #### Officer Account
-1. Create user: `officer@demo.com` / `password123`
-2. Add profile:
-```sql
-INSERT INTO profiles (id, full_name, role, panchayat_id, phone)
-VALUES (
-  'user_id_from_auth',
-  'Sunita Sharma',
-  'officer',
-  '00000000-0000-0000-0000-000000000001',
-  '+91-9876543220'
-);
-```
+- **Email**: `officer@demo.com`
+- **Password**: `password123`
+- **Role**: Panchayat Officer
+- **Features**: Analytics dashboard, worker performance, citizen feedback management
+- **Sample Data**: 3 pending citizen complaints, worker statistics
 
-#### Generate Sample Data
-After creating worker profile, generate historical data:
-```sql
-SELECT generate_sample_waste_logs('worker_user_id', '00000000-0000-0000-0000-000000000001');
-SELECT generate_sample_attendance('worker_user_id', '00000000-0000-0000-0000-000000000001');
-```
+#### Citizen Access
+- No login required
+- Click "Citizen" role on the landing page to submit feedback directly
 
 ### 5. Install & Run
 

@@ -105,9 +105,20 @@ export function LoginPage({ onBack }: LoginPageProps) {
             </button>
           </form>
 
-          <div className="mt-6 text-center text-sm text-gray-600">
-            <p>For demo purposes:</p>
-            <p className="mt-1">Worker / Officer / Citizen accounts</p>
+          <div className="mt-6 p-4 bg-blue-50 border border-blue-200 rounded-lg">
+            <p className="text-sm font-semibold text-gray-900 mb-2">Demo Accounts:</p>
+            <div className="space-y-2 text-xs text-gray-700">
+              <div className="bg-white p-2 rounded">
+                <p className="font-medium text-blue-700">Worker Account</p>
+                <p>Email: worker@demo.com</p>
+                <p>Password: password123</p>
+              </div>
+              <div className="bg-white p-2 rounded">
+                <p className="font-medium text-green-700">Officer Account</p>
+                <p>Email: officer@demo.com</p>
+                <p>Password: password123</p>
+              </div>
+            </div>
           </div>
         </div>
       </div>
