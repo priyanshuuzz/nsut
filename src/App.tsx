@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import { useAuth } from './contexts/AuthContext';
-import { LandingPage } from './components/LandingPage';
+import { ModernLandingPage } from './components/ModernLandingPage';
 import { LoginPage } from './components/auth/LoginPage';
 import { AppLayout } from './components/layout/AppLayout';
 import { WorkerDashboard } from './components/worker/WorkerDashboard';
@@ -24,7 +24,7 @@ function App() {
 
   // Show landing page if no role is selected and no user is logged in
   if (!selectedRole && !user) {
-    return <LandingPage onRoleSelect={setSelectedRole} />;
+    return <ModernLandingPage onRoleSelect={setSelectedRole} />;
   }
 
   // Show citizen feedback form directly if citizen role is selected
